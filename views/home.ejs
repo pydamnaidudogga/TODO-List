@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title><%=title%></title>
+        <!-- <style>
+            h1{
+                /* color: blueviolet; */
+            }
+        </style> -->
+        <script src="https://kit.fontawesome.com/1a475d1a3c.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet"  href="/css/home.css">
+    </head>
+    <body>
+        <main>
+        <div id="main-container">
+           <div id="main-heading"> 
+               <h1 >TODO App</h1>
+           </div>
+           <div id="main-heading-below-info">
+                <span>Don't worry,We are hear to remember your events</span>
+           </div>
+           <div id="input_div">
+             <form action="/add_event"  method="post">
+                <div id="discription_div">
+                    <p class="sub_heading">DESCRIPTION</p>
+                    <input type="text" name="event_info" placeholder="what do you need to do?" required>
+                </div>
+                <div id="category-date">    
+                   <span> 
+                       <p class="sub_heading">CATRGORY</p>
+                       <select name="event_category" id="selection_iteams">
+                          <option value="personal">personal</option>
+                          <option value="work">work</option>
+                          <option value="school">school</option>
+                          <option value="school">clothing</option>
+                          <option value="school">famile</option>
+                          <option value="school">other</option>
+                       </select>
+                   </span>
+                   <span>
+                          <p class="sub_heading">DUE DATE</p>
+                          <input class="input_op_remove" type="date" id="date_info" name="due_date" placeholder="dd-mm-yyyy" required>
+                   </span>
+                </div>   
+                <div id="buttons_container">
+                    <span id="add_b_span">
+                       <button type="submit" id="add_button">
+                          <strong><i class="fa-solid fa-plus"></i>&nbsp  ADD TASK</strong>
+                       </button>
+                    </span>
+                   
+                </div>
+             </form>
+           </div>
+           <div id="display-events">
+            <form action="/event_delete" method="post">
+                  <div id="delete_button_container">
+                     <button type="submit" id="delete_button">
+                        <strong>
+                          <i class="fa-solid fa-trash-can"></i>&nbsp  REMOVE
+                        </strong>
+                     </button>
+                  </div>
+                  <div id="list_heading">
+                      <h4 ><i class="fa-solid fa-clipboard-list"></i>&nbsp  Hear the list todo</h4>
+                  </div>
+                  <div>
+
+                <% for(let i of eventList){%>
+                     <div id="event_detail_container">
+                        <div id="date_and_dis">
+                            <input type="checkbox" name="event" value="<%=i._id%>">
+                            <span><%= i.eventdescription %></span>
+                            <p><i class="fa-regular fa-calendar"></i>&nbsp<%= i.duedate %></p>
+                        </div>
+                        <div id="details">
+                         <span>
+                             <p><%= i.category %></p>
+                         </span>
+                         
+                        </div>
+                     </div>
+                <%}%>
+                  </div>
+            </form>
+
+
+           </div>
+        </div>
+      </main>
+        <script src="/js/home.js"></script>
+    </body>
+</html>

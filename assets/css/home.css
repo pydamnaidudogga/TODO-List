@@ -1,0 +1,205 @@
+/* body margin is set 0
+set the font family to sens-serif */
+ /* In the css file i used lightgray,gray,#4c4b74,#753da3 these colors */
+
+body{
+    margin:0;
+    font-family: sans-serif;
+    /* background-color: #333D79FF; */
+    
+}
+#main-container{
+    position: absolute;
+    width:50%;
+    left: 25%;
+    border: 2px solid lightgray;
+}
+/* this is the top main heading */
+#main-heading{
+    text-align: center;
+    /* margin-top: 15px; */
+    /* background-image:linear-gradient(grey,lightgrey) ; */
+    background-color: lightgrey;
+}
+/* top main heading text in h1 tag */
+#main-heading h1{
+    color: grey;
+    margin: 0;
+}
+/* this is the main heading below information div*/
+#main-heading-below-info{
+    text-align: center;
+    /* background-color:#96919b; */
+}
+/* this is the main heading below information text in span tag*/
+#main-heading-below-info span{
+    color: #96919b;
+    font-size: 13px;
+}
+/* this is input taken main div */
+/* #input_div{
+    border:2px solid gray;
+} */
+.input_op_remove{
+    outline: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+/* this description taken input tag */
+#discription_div input{
+    width: 90%;
+    padding:10px;
+    margin-left: 5px;
+    border: 0;
+    outline: none;
+    margin-bottom: 7px;
+    background-color: inherit;
+}
+/* mouse over function */
+#discription_div input:hover{
+    background-color: #e5e2e2;
+
+}
+#discription_div:hover{
+    background-color: #e5e2e2;
+}
+/* this is class for all headings at the top of every input tags */
+.sub_heading{
+    width: 90%;
+    font-size: 12px;
+    margin-top: 5px ;
+    margin-left: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: grey;
+
+
+}
+/* this is the container of both category section and date section */
+#category-date{
+    width: 100%;
+}
+/* this is the two divs under the category-date div */
+#category-date span{
+    display: inline-block;
+    width: 49%;
+    border: 1px solid lightgrey;
+    
+}
+/* this is the mouse over effect */
+#category-date span:hover{
+    background-color: #e5e2e2;
+}
+#category-date select{
+     background-color:inherit;
+}
+
+#category-date input{
+    background-color:inherit;
+}
+/* this is the width edjestment at below 840 px of category div and date div */
+@media screen and (max-width:840px) {
+    #category-date span{
+        width: 100%;
+    }
+}
+/* this is the section iteams in the section div */
+#selection_iteams{
+    width: 100%;
+    outline: none;
+    border: 0;
+    margin-bottom: 5px;
+    
+    padding: 10px;
+}
+/* this is the date info div */
+#date_info{
+width: 100%;
+margin-bottom: 5px;
+padding: 10px;
+}
+/* this is the add event button container */
+#buttons_container{
+    display: flex;
+    justify-content: center;
+}
+#buttons_container span{
+    display: inline-block;
+    width: 110px;
+    height: 35px;
+    /* border: 3px solid rebeccapurple; */
+}
+/* this is the add event button */
+#add_button{
+
+    width: 100%;
+    height: 100%;
+    background-color: #4c4b74;
+    border: 0;
+    border-radius: 3px;
+}
+
+/* this is the delete button container */
+#delete_button_container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+/* this is the dielete button container */
+#delete_button{
+    height:35px ;
+    width: 110px;
+    background-color: #4c4b74;
+    border: 0;
+    border-radius: 3px;
+}
+strong{
+    color: #efefef;
+}
+ /* this is the heading for display evnts list */
+#list_heading h4{
+    margin: 0;
+    margin-left: 10px;
+    color: #726f89;
+}
+/* this is the event display list main container */
+#event_detail_container{
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid lightgray;
+}
+#event_detail_container:hover{
+    background-color: #e5e2e2;
+}
+/* this is the date and description div in display event list */
+#date_and_dis{
+    width: 60%;
+    height: 70px;
+}
+#date_and_dis p{
+    margin: 0px;
+    width: 150px;
+    font-size: 12px;
+    margin-left: 24px;
+}
+#date_and_dis input{
+    margin-top: 20px;
+}
+#date_and_dis span{
+    margin-bottom: 3px;
+}
+#details span{
+    display: inline-block;
+    margin: 16px;
+    border-radius: 3px;
+    width: 90px;
+    background-color: #753da3;
+
+}
+#details span p{
+    text-align: center;
+    color: white;
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
